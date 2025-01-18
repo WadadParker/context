@@ -1,10 +1,10 @@
 
 const AddButton = ({setCount}) => {
-    return <button className="text-lg border rounded-lg text-red-400 px-6 py-2 transition-all ease-linear focus:translate-y-[1px]" onClick={()=>setCount(prev=>prev + 1)}>Add</button>
+    return <button className="text-lg border rounded-lg text-green-400 px-6 py-2 transition-all ease-linear focus:translate-y-[1px]" onClick={()=>setCount(prev=>prev + 1)}>Add</button>
 }
 
 const SubtractButton = ({setCount}) => {
-    return <button className="text-lg border rounded-lg text-red-400 px-6 py-2 transition-all ease-linear focus:translate-y-[1px]" onClick={()=>setCount(prev=>prev - 1)}>Subtract</button>
+    return <button className="text-lg border rounded-lg text-blue-400 px-6 py-2 transition-all ease-linear focus:translate-y-[1px]" onClick={()=>setCount(prev=>prev - 1)}>Subtract</button>
 }
 
 const ButtonContainer = ({setCount}) => {

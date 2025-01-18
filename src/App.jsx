@@ -4,7 +4,7 @@ import Title from "./components/Title";
 function App() {
   const[count,setCount] = useState(0);
   return (
-      <div className="flex bg-black h-screen space-x-20">
+      <div className="flex justify-center items-start p-40 bg-black h-screen space-x-20">
         <Sidebar count={count} setCount={setCount}/>
         <Title setCount={setCount}/>
       </div>
