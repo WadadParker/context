@@ -27,7 +27,7 @@ const Heading = () => {
 
 const Title = () => {
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-4 border border-green-300 p-2">
     <Heading />
     <ButtonContainer />
     </div>
