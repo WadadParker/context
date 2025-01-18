@@ -7,11 +7,10 @@ export const CountContext = createContext();
 
 const CountProvider = ({children}) => {
   const [count,setCount] = useState(0);
+  const [title,setTitle] = useState("Consuming Context")
   return (
-      <CountContext.Provider value={{count,setCount}}>
-        <div className="border border-blue-400 space-x-20 flex p-2">
+      <CountContext.Provider value={{count,setCount,title}}>
         {children}
-        </div>
       </CountContext.Provider>
   )
 }
@@ -19,8 +18,8 @@ const CountProvider = ({children}) => {
 function App() {
   
   return (
-      <div className="flex justify-center items-start p-40 bg-black h-screen ">
-        <h1 className="text-4xl absolute text-white top-10">ContextProvider is also a Component which rerenders</h1>
+      <div className="flex justify-center items-start p-40 space-x-10 bg-black h-screen ">
+        <h1 className="text-4xl absolute text-white top-10">Rerender without Change</h1>
         <CountProvider>
           <Sidebar />
           <Title />

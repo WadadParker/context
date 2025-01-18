@@ -22,12 +22,13 @@ const ButtonContainer = () => {
 }
 
 const Heading = () => {
+    const {title} = useContext(CountContext);
     return <h1 className="text-6xl text-red-400">With Context</h1>
 }
 
 const Title = () => {
   return (
-    <div className="flex flex-col space-y-4 border border-green-300 p-2">
+    <div className="flex flex-col space-y-4 p-2">
     <Heading />
     <ButtonContainer />
     </div>
