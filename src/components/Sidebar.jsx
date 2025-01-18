@@ -17,8 +17,9 @@ const ResetCount = () => {
 
 
 const Sidebar = () => {
+  console.log("Sidebar no longer re renders");
     return (
-      <div className="w-40 border border-violet-500 pb-4 text-white rounded-lg mx-1 my-2 space-y-4 text-center">
+      <div className="w-40 border bg-red-200 border-violet-500 pb-4 text-white rounded-lg mx-1 my-2 space-y-4 text-center">
         <DisplayCount />
         <ResetCount />
       </div>
