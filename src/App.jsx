@@ -9,9 +9,9 @@ const CountProvider = ({children}) => {
   const [count,setCount] = useState(0);
   const [title,setTitle] = useState("Consuming Context")
   return (
-      <CountContext.Provider value={{count,setCount,title}}>
+      <CountContext value={{count,setCount,title}}>
         {children}
-      </CountContext.Provider>
+      </CountContext>
   )
 }
 
