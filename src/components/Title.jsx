@@ -22,7 +22,7 @@ const ButtonContainer = () => {
 
 const Heading = () => {
     const {title} = useContext(TitleContext);
-    return (<h1 className="text-6xl text-red-400">Context Consumer</h1>)
+    return (<h1 className="text-6xl text-red-400">{title}</h1>)
 }
 
 const Title = () => {
