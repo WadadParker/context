@@ -4,14 +4,25 @@ import Sidebar from "./components/Sidebar"
 import Title from "./components/Title";
 
 export const CountContext = createContext();
+export const TitleContext = createContext();
+
+export const TitleProvider = ({children}) => {
+  const [title,setTitle] = useState("Consuming Context")
+
+  return (
+    <TitleContext value={{title}}>
+        {children}
+      </TitleContext>
+  )
+}
 
 const CountProvider = ({children}) => {
   const [count,setCount] = useState(0);
-  const [title,setTitle] = useState("Consuming Context")
+  
   return (
-      <CountContext.Provider value={{count,setCount,title}}>
+      <CountContext value={{count,setCount}}>
         {children}
-      </CountContext.Provider>
+      </CountContext>
   )
 }
 

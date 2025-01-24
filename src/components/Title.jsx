@@ -1,5 +1,5 @@
 import {  useContext } from "react"
-import { CountContext } from "../App"
+import { CountContext , TitleContext , TitleProvider } from "../App"
 
 const AddButton = () => {
     const {setCount} = useContext(CountContext);
@@ -21,14 +21,16 @@ const ButtonContainer = () => {
 }
 
 const Heading = () => {
-    const {title} = useContext(CountContext);
+    const {title} = useContext(TitleContext);
     return (<h1 className="text-6xl text-red-400">Context Consumer</h1>)
 }
 
 const Title = () => {
   return (
     <div className="flex flex-col space-y-4 p-2">
-        <Heading />
+        <TitleProvider>
+            <Heading />
+        </TitleProvider>
         <ButtonContainer />
     </div>
   )
