@@ -7,7 +7,7 @@ export const CountContext = createContext();
 export const TitleContext = createContext();
 
 export const TitleProvider = ({children}) => {
-  const [title,setTitle] = useState("Split Context whenever possible")
+  const [title,setTitle] = useState("Split Context")
   return (
     <TitleContext value={{title}}>
         {children}
