@@ -20,7 +20,9 @@ const CountProvider = ({children}) => {
   
   return (
       <CountContext value={{count,setCount}}>
+        <div className="flex p-2 space-x-20 border border-blue-500">
         {children}
+        </div>
       </CountContext>
   )
 }
@@ -28,8 +30,8 @@ const CountProvider = ({children}) => {
 function App() {
   
   return (
-      <div className="flex justify-center items-start py-40 space-x-10 bg-black h-screen ">
-        <h1 className="text-4xl absolute text-white top-10">Rerender without Change</h1>
+      <div className="flex justify-center items-start py-32 space-x-10 bg-black h-screen">
+        <h1 className="text-4xl absolute ml-10 top-10">Rerender without Change</h1>
         <CountProvider>
           <Sidebar />
           <Title />
