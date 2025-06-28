@@ -23,7 +23,7 @@ const ButtonContainer = () => {
 }
 
 const Heading = () => {
-    return (<h1 className="text-6xl text-red-400">With Context</h1>)
+    return (<h1 className="text-6xl text-red-400">Prop Drilling</h1>)
 }
 
 const Title = () => {
