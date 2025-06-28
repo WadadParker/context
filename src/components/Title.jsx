@@ -1,30 +1,34 @@
-import { use } from "react"
+import React , { use, useContext } from "react"
 import { CountContext } from "../App"
 
-const AddButton = ({setCount}) => {
-    console.log("This is getting rerendered?")
+const AddButton = () => {
+    const {setCount} = use(CountContext);
     return (<button className="text-lg border rounded-lg text-green-400 px-6 py-2 transition-all ease-linear focus:translate-y-[1px]" onClick={()=>setCount(prev=>prev+1)}>Add</button>)
 }
 
-const SubtractButton = ({setCount}) => {
+const SubtractButton = () => {
+    const {setCount} = use(CountContext);
     return (<button className="text-lg border rounded-lg text-blue-400 px-6 py-2 transition-all ease-linear focus:translate-y-[1px]" onClick={()=>setCount(prev=>prev-1)}>Subtract</button>)
 }
 
 const ButtonContainer = () => {
-    const {setCount} = use(CountContext);
+    "use no memo"
     return (
         <div className="flex  h-20 items-center gap-x-4 pl-4 border border-red-300">
-            <AddButton setCount={setCount} />
-            <SubtractButton setCount={setCount} />
+            <AddButton />
+            <SubtractButton />
+            
         </div>
     )
 }
 
 const Heading = () => {
-    return (<h1 className="text-6xl text-red-400">With Compiler</h1>)
+    const {title} =useContext(CountContext)
+    return (<h1 className="text-6xl text-red-400">Context Consumer</h1>)
 }
 
 const Title = () => {
+    "use no memo"
   return (
     <div className="flex flex-col space-y-4 p-2">
         <Heading />
